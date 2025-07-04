@@ -4,35 +4,31 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const db = new PrismaClient();
   try {
-    const data = await db.siteAnalytics.findUnique({
-      where: {
-        siteName: "portfolio",
-      },
+    const siteName = "portfolio";
+
+    // Try to find the record
+    let data = await db.siteAnalytics.findUnique({
+      where: { siteName },
     });
 
-    const vists = data?.visitors;
+    if(!data)return;
+    const newVisitCount = data.visitors + 1;
 
-    const newVisitCount = vists! + BigInt(1);
-    
     await db.siteAnalytics.update({
-      where: {
-        siteName: "portfolio",
-      },
-      data: {
-        visitors: newVisitCount,
-      },
+      where: { siteName },
+      data: { visitors: newVisitCount },
     });
 
-    return NextResponse.json({ 
-      success: true, 
-      visitor: newVisitCount.toString() 
+    return NextResponse.json({
+      success: true,
+      visitor: newVisitCount,
     });
-  }catch (e: any) {
+  } catch (e: any) {
     return NextResponse.json({
       success: false,
-      message:`${e}`
+      message: `${e}`,
     });
   } finally {
-    db.$disconnect();
+    await db.$disconnect();
   }
 }

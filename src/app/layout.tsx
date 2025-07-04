@@ -13,7 +13,7 @@ const font = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Anurag Maurya",
+  title: "Harmeet Singh",
   description: "Fullstack Developer ",
 };
 

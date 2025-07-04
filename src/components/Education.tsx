@@ -13,24 +13,24 @@ export default function Education(){
             <h1 className={`${font.className} font-semibold text-3xl`}>Education</h1>
             <div className="flex w-full items-center gap-5 mt-5">
                 <div>
-                    <Image src={"/lpulogo.jpg"} width={50} height={50} alt="LPU LOGO" className="rounded-full"/>
+                    <Image src={"/iiitkota.webp"} width={50} height={50} alt="IIITK LOGO" className="rounded-full"/>
                 </div>
-                <div className="w-full">
+                <div className="w-full ml-5">
                     <div className="flex justify-between items-center">
-                        <div className="items-center gap-2"><h1 className="font-bold">Lovely Professional University</h1></div>
+                        <div className="items-center gap-2"><h1 className="font-bold">IIIT KOTA</h1></div>
                         <h1 className="text-sm text-primary/70">Graduating in May 2027</h1>
                     </div>
-                    <span className="text-sm font-normal text-primary/70">B.Tech CSE with specialization     in AI and ML</span>
+                    <span className="text-sm font-normal text-primary/70">B.Tech CSE</span>
                 </div>
             </div>
             <div className="flex w-full items-center gap-5 mt-5">
                 <div>
-                    <Image src={"/apslogo.png"} width={50} height={50} alt="APS LOGO" className=""/>
+                    <Image src={"/images.jpeg"} width={50} height={50} alt="SPL LOGO" className="rounded-full scale-125"/>
                 </div>
-                <div className="w-full">
+                <div className="w-full ml-5">
                     <div className="flex justify-between items-center">
-                        <div className="items-center gap-2"><h1 className="font-bold">Army Public School</h1></div>
-                        <h1 className="text-sm text-primary/70">Graduated in March 2023</h1>
+                        <div className="items-center gap-2"><h1 className="font-bold">St. Paul Sr. Sec. School, Ajmer</h1></div>
+                        <h1 className="text-sm text-primary/70">Graduated in March 2021</h1>
                     </div>
                     <p className="text-sm text-primary/70">1st to 12th Standard</p>
                 </div>
