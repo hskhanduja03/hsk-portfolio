@@ -11,7 +11,21 @@ export async function GET() {
       where: { siteName },
     });
 
-    if(!data)return;
+    if (!data) {
+      data = await db.siteAnalytics.create({
+        data: {
+          siteName,
+          visitors: 500,
+        },
+      });
+
+      return NextResponse.json({
+        success: true,
+        visitor: 1,
+      });
+    }
+
+    // If it exists, update the visitor count
     const newVisitCount = data.visitors + 1;
 
     await db.siteAnalytics.update({
