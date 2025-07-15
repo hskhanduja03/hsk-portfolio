@@ -42,17 +42,17 @@ export default function HeroSection() {
               <Mail className="mr-2 h-4 w-4" /> Get in touch
             </RainbowButton>
           </Link>
-          <Link
-            href={
-              process.env.RESUME_LINK
-            }
-            target="_blank"
-          >
-            <RainbowButton variant="outline">
-              <File className="mr-2 h-4 w-4" />
-              My Resume
-            </RainbowButton>
-          </Link>
+          <a
+  href={process.env.RESUME_LINK}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <RainbowButton variant="outline">
+    <File className="mr-2 h-4 w-4" />
+    My Resume
+  </RainbowButton>
+</a>
+
         </div>
         <div className="flex flex-wrap gap-3 mt-3 justify-center md:justify-start items-center">
           {/* <Link
