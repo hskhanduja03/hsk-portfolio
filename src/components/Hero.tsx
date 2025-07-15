@@ -44,7 +44,7 @@ export default function HeroSection() {
           </Link>
           <Link
             href={
-              "https://drive.google.com/file/d/1I-P83tvss19RqvP-mJpEvI9wf77pmWoq/view?usp=sharing"
+              process.env.RESUME_LINK
             }
             target="_blank"
           >
